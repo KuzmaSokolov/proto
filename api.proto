@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "./proto";
+
+message LogRequest{
+  string error = 1;
+}
+
+message LogResponse{
+}
+
+service LoggerAPI {
+  rpc LogError(LogRequest) returns (LogResponse) {}
+}
